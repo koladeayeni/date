@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Date Night at Palisade</title>
+    <!-- Preconnect to Google Fonts for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Elegant serif font for headings and clean sans-serif for body copy -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="overlay">
+        <h1>Me. You. Palisade.</h1>
+        <p class="subtitle">Anne, will you join me this evening at Seattle's waterfront gem?</p>
+        <p class="datetime">August 9, 2025 &bullet; 7:45&nbsp;PM</p>
+        <button id="rsvpButton">I'm In!</button>
+      </div>
+    </header>
+
+    <section class="countdown-section">
+      <h2>Counting down to our date</h2>
+      <div id="countdown" class="countdown">
+        <div class="time-box">
+          <span id="days">00</span>
+          <span class="label">Days</span>
+        </div>
+        <div class="time-box">
+          <span id="hours">00</span>
+          <span class="label">Hours</span>
+        </div>
+        <div class="time-box">
+          <span id="minutes">00</span>
+          <span class="label">Minutes</span>
+        </div>
+        <div class="time-box">
+          <span id="seconds">00</span>
+          <span class="label">Seconds</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="about">
+      <h2>About Palisade</h2>
+      <p>
+        Palisade is located at <strong>2601 W Marina Place, Seattle, WA 98199</strong>.
+        Let's go chill, have fun, just trustt meee!
+      </p>
+    </section>
+
+    <section class="message">
+      <h2>A Sweet Note</h2>
+      <p id="surpriseMessage" class="hidden">
+        I thought to give you a little bit of my nerd side today. I'll see you tonight. Next time, I am not telling you nothing, we are just gonna go with vibes and you can't say anything.
+      </p>
+    </section>
+
+    <footer>
+      <p>Made with ❤️. See you soon!</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

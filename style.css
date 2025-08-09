@@ -1,0 +1,194 @@
+/*
+ * Stylesheet for the date night landing page
+ *
+ * This file defines all colours, typography and layout for the site.
+ * Colours are defined as CSS variables for easy customisation. The
+ * design aims for a warm, romantic feel inspired by the sunset tones of
+ * the hero artwork. Responsive rules ensure the countdown and
+ * information sections look great on mobile devices.
+ */
+
+:root {
+  --primary: #e76f51; /* coral-like accent colour */
+  --secondary: #2a2a2a; /* dark grey for section backgrounds */
+  --accent: #e9c46a; /* golden highlight colour */
+  --light: #ffffff; /* base light colour for text */
+  --dark: #1a1a1a; /* deepest background colour */
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--dark);
+  color: var(--light);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* Hero section with background image and overlayed text */
+.hero {
+  position: relative;
+  height: 100vh;
+  background-image: url('images/hero2.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero .overlay {
+  background: rgba(0, 0, 0, 0.55);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  max-width: 90%;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin: 0;
+  color: var(--accent);
+}
+
+.hero .subtitle {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  color: var(--light);
+}
+
+.hero .datetime {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: var(--light);
+}
+
+/* Button styling */
+#rsvpButton {
+  background-color: var(--primary);
+  color: var(--light);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#rsvpButton:hover {
+  background-color: var(--accent);
+}
+
+/* Countdown section */
+.countdown-section {
+  padding: 3rem 1rem;
+  background-color: var(--secondary);
+  text-align: center;
+}
+
+.countdown-section h2 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.time-box {
+  background-color: var(--dark);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  min-width: 80px;
+}
+
+.time-box span {
+  display: block;
+}
+
+.time-box .label {
+  font-size: 0.8rem;
+  color: var(--accent);
+}
+
+.time-box span:first-child {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: var(--light);
+}
+
+/* About, plan and message sections */
+.about,
+.plan,
+.message {
+  padding: 3rem 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about h2,
+.plan h2,
+.message h2 {
+  font-family: 'Playfair Display', serif;
+  color: var(--accent);
+  margin-top: 0;
+}
+
+.about p,
+.message p {
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
+}
+
+.plan ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.plan li {
+  margin-bottom: 0.8rem;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.plan li::before {
+  content: '\2022';
+  color: var(--primary);
+  position: absolute;
+  left: 0;
+  font-size: 1.5rem;
+  line-height: 1;
+  top: -0.1rem;
+}
+
+/* Hidden class for surprise message */
+.hidden {
+  display: none;
+}
+
+footer {
+  background-color: var(--secondary);
+  padding: 1rem;
+  text-align: center;
+  color: var(--accent);
+  font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  .countdown {
+    flex-direction: column;
+    align-items: center;
+  }
+  .time-box {
+    margin-bottom: 1rem;
+  }
+}
